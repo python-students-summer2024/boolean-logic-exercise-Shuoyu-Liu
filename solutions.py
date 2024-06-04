@@ -14,6 +14,13 @@ def is_sweltering():
       :returns: True if the temperature is over 90, False otherwise.
     """
     # write your code for this function below this line.
+    temperature = float(input("please enter the temperature"))
+    result = temperature > 90
+    return result
+    
+
+
+
 
 
 def is_warm():
@@ -25,6 +32,11 @@ def is_warm():
       :returns: True if the temperature is between 75 and 87, inclusive, False otherwise.
     """
     # write your code for this function below this line.
+    temperature = float(input("please enter the temperature"))
+    result1 = 75 <= temperature 
+    result2 = 87 >= temperature
+    return result1 and result2
+
 
 
 def is_humid():
@@ -36,6 +48,10 @@ def is_humid():
       :returns: True if it is humid today, False otherwise.
     """
     # write your code for this function below this line.
+    response = (input("enter your response"))
+    result1 = "yes" == response
+    result2 = "no" == response
+    return result1 or result2
 
 
 def is_inclement():
@@ -47,6 +63,9 @@ def is_inclement():
       :returns: True if it is raining, snowing, or sleeting today, False otherwise.
     """
     # write your code for this function below this line.
+    forecast = input("what is the weather forecast today? ")
+    inclement_weather = {"rain", "snow", "sleet"}
+    return forecast in inclement_weather 
 
 
 def is_typical_new_york_summer():
@@ -60,6 +79,9 @@ def is_typical_new_york_summer():
       :returns: True if the temperature is over 90 and it is humid, False otherwise.
     """
     # write your code for this function below this line.
+    res1 = is_sweltering()
+    res2 = is_humid()
+    return res1 and res2
 
 
 def is_cool_and_nice():
@@ -72,3 +94,16 @@ def is_cool_and_nice():
       :returns: True if the weather is cool and nice today, False otherwise.
     """
     # write your code for this function below this line.
+    weather = input("what is the weather today")
+    res1 = is_sweltering()
+    res2 = is_warm()
+    res3 = is_humid()
+    res4 = is_inclement()
+
+    res11 = res1 == False
+    res22 = res2 == False
+    res33 = res3 == False
+    res44 = res4 == False
+    return res11 and res22 and res33 and res44
+    
+
